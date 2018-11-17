@@ -43,5 +43,19 @@ $(document).ready(function() {
             $("#match-photo").attr("src", data.photo);
             $("#response").modal("toggle");
         });
+
+        $("#name").val("");
+        $("#photo").val("");
+        $("#question-one").val(3);
+        $("#question-two").val(3);
+        $("#question-three").val(3);
+        $("#question-four").val(3);
+        $("#question-five").val(3);
+        $("#question-six").val(3);
+        $("#question-seven").val(3);
+        $("#question-eight").val(3);
+        $("#question-nine").val(3);
+        $("#question-ten").val(3);
+        $("html, body").animate({ scrollTop: 0 }, "slow");
     }
 });
