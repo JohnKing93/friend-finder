@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>Friend Finder: Survey</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/form.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+
+  <div class="container" id="white-block">
+    <div class="row">
+      <div class="col-12 col-md-12">
+
+        <div class="jumbotron jumbotron-fluid" id="white-block">
+          <div class="container">
+            <h1 class="display-1 text-center">Find Your Match</h1>
+          </div>
+        </div>
+        
+        <form class="needs-validation" id="survey" novalidate>
+
+          <div class="container">
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationTooltip01">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="First Last" required>
+                <div class="valid-tooltip">
+                  Looks good!
+                </div>
+                <div class="invalid-tooltip">
+                  Please enter your name.
+                </div>
+              </div>
+              <div class="col-md-8 mb-3">
+                <label for="validationTooltip02">Photo Link</label>
+                <input type="text" class="form-control" id="photo" placeholder="https://" required>
+                <div class="valid-tooltip">
+                  Looks good!
+                </div>
+                <div class="invalid-tooltip">
+                  Please enter a photo link.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="container">
+            <h3>Question 1</h3>
+            <label for="question-one">Do you like outdoor activities?</label>
+            <input type="range" class="custom-range" min="1" max="5" id="question-one">
+          </div>
+
+          <div class="container">
+            <h3>Question 2</h3>
+            <label for="question-two">Do you have busy weekends?</label>
+            <input type="range" class="custom-range" min="1" max="5" id="question-two">
+          </div>
+
+          <div class="container">
+            <h3>Question 3</h3>
+            <label for="question-three">Are you currently chasing a dream?</label>
+            <input type="range" class="custom-range" min="1" max="5" id="question-three">
+          </div>
+
+          <div class="container">
+            <h3>Question 4</h3>
+            <label for="question-four">Are you currently chasing a dream?</label>
+            <input type="range" class="custom-range" min="1" max="5" id="question-four">
+          </div>
+
+          <div class="container">
+            <h3>Question 5</h3>
+            <label for="question-five">Are you currently chasing a dream?</label>
+            <input type="range" class="custom-range" min="1" max="5" id="question-five">
+          </div>
+
+          <div class="container">
+            <h3>Question 6</h3>
+            <label for="question-six">Do you like outdoor activities?</label>
+            <input type="range" class="custom-range" min="1" max="5" id="question-six">
+          </div>
+
+          <div class="container">
+            <h3>Question 7</h3>
+            <label for="question-seven">Do you have busy weekends?</label>
+            <input type="range" class="custom-range" min="1" max="5" id="question-seven">
+          </div>
+
+          <div class="container">
+            <h3>Question 8</h3>
+            <label for="question-eight">Are you currently chasing a dream?</label>
+            <input type="range" class="custom-range" min="1" max="5" id="question-eight">
+          </div>
+
+          <div class="container">
+            <h3>Question 9</h3>
+            <label for="question-nine">Are you currently chasing a dream?</label>
+            <input type="range" class="custom-range" min="1" max="5" id="question-nine">
+          </div>
+
+          <div class="container">
+            <h3>Question 10</h3>
+            <label for="question-ten">Are you currently chasing a dream?</label>
+            <input type="range" class="custom-range" min="1" max="5" id="question-ten">
+          </div>
+
+          <div class="container">
+            <br>
+            <button type="submit" class="btn btn-primary btn-lg" id="submit">Submit</button>
+          </div>
+
+          <div class="container">
+            <hr>
+              <p><a href="/">Home</a> | <a href="/api/friends">API Friends List</a> | <a href="https://github.com/johnking93/friend-finder">GitHub Repo</a></p>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" tabindex="-1" role="dialog" id="response">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Your Match</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+            <h4 id="match-name"></h4>
+            <img id="match-photo" src="">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

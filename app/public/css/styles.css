@@ -1,0 +1,8 @@
+body {
+    background-image: url("../assets/just-waves.png");
+    background-repeat: repeat;
+}
+
+#white-block {
+    background-color: white;
+}
